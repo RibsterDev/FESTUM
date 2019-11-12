@@ -2,13 +2,13 @@ class EventsController < ApplicationController
   before_action :find_event, only: [:show, :edit, :update, :destroy]
 
   def index
+    cookies[:category] = params[:category]
+    @events = EventHome.new(cookies).result
 
-    cookies[:categories] = params[:categories]
-
-    date = Events.where(date_start: cookies[:date_start])
-    loca = Event.where(location: cookies[:location])
-    catego = Event.where(categories: coockies[:categories])
-    @events = date & loca & catego
+    # date = Event.where(date_start: cookies[:date_start])
+    # loca = Event.where(location: cookies[:location])
+    # catego = Event.where(categories: cookies[:categories])
+    # @events = date & loca & catego
 
   end
 
@@ -17,6 +17,8 @@ class EventsController < ApplicationController
 
 
   def categories
+    cookies[:date_start] = params[:date_start]
+    cookies[:location] = params[:location]
     @events = EventHome.new(params).home
   end
 
