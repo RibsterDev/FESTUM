@@ -1,0 +1,45 @@
+<div class="container">
+  <div>
+    <img src="https://images.unsplash.com/photo-1571575522341-be760794a35b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80" alt="event">
+  </div>
+  <div>
+    <div>
+      <h2><%=@event.name  %></h2>
+      <p><%=@event.location %></p>
+    </div>
+    <div>
+      <h3><%= @event.category %></h3>
+      <p><%= @event.sub_category %></p>
+      <p><%= @event.date_start %></p>
+    </div>
+  </div>
+
+  <%= link_to "Add to your list", event_event_users_path(@event), method: :post, data: {confirm: "Are U sure ?"}%>
+
+
+<!--
+  <div class="flash flash-success alert alert-dismissible fade show" role="alert">
+    <span><strong>Yay!</strong> 🎉 you successfully signed in to our service.</span>
+    <a data-dismiss="alert" aria-label="Close">
+      <i class="fas fa-times"></i>
+    </a>
+  </div>
+</div>
+
+ -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
