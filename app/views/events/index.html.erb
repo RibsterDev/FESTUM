@@ -1,6 +1,8 @@
 <div class="container">
-<%= @events.each do |event| %>
-<h1><%= event.category %></h1>
-<p><%= event.name %></p>
-<% end %>
+  <%= @events.each do |event| %>
+  <h1><%= event.name %></h1>
+  <%= link_to "view details", event_path(event) %>
+  <p><%= event.location %></p>
+  <p><%= event.date_start %></p>
+  <% end %>
 </div>
