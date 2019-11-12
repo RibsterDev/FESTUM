@@ -11,18 +11,47 @@ puts "cleaning database"
 Event.destroy_all
 User.destroy_all
 
+# user_attributes = [{
+#     name: "lea",
+#     email: "lea@gmail.com",
+#     password: "lealea"
+#   },
+#   {
+#     name: "evan,",
+#     email: "evan@gmail.com",
+#     password: "evanevan"
+#   },
+#   {
+#     name: "jeremy",
+#     email: "jeremy@gmail.com",
+#     password: "jeremy"
+#   }
+# ]
+# User.create!(user_attributes)
 
 
-
+user1 = User.new(
+  name: "lea",
+  email: "lea@gmail.com",
+  password: "lealea"
+  )
+user1.save!
+user2 = User.new(
+  name: "evan",
+  email: "evan@gmail.com",
+  password: "evanevan"
+  )
+user2.save!
+user3 = User.new(
+  name: "jeremy",
+  email: "jeremy@gmail.com",
+  password: "jeremy"
+  )
+user3.save!
+users = [user1, user2, user3]
 
 
 10.times do
-  user = User.new(
-    email: Faker::Internet.email,
-    password: Faker::Internet.password,
-    name: Faker::Name.name
-    )
-  user.save!
   event = Event.new(
     name: Faker::Company.name,
     date_start: Faker::Date.forward(days:300),
@@ -30,7 +59,7 @@ User.destroy_all
     periodicity: ['mois', 'année', 'jour'].sample,
     category: ['concert', 'theatre', 'dancing'].sample,
     sub_category: ['humour', 'drame', 'chanson', 'art de rue', 'animation'].sample,
-    creator: user
+    creator: users.sample
     )
   event.save!
 end
