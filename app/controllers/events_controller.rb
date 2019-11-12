@@ -2,11 +2,17 @@ class EventsController < ApplicationController
   before_action :find_event, only: [:show, :edit, :update, :destroy]
 
   def index
-    @events = Event.all
+
   end
 
   def show
+  end
 
+  def categories
+    @events = EventHome.new(params).home
+  end
+
+  def home
   end
 
   def new
@@ -41,6 +47,6 @@ class EventsController < ApplicationController
   end
 
   def event_params
-    params.require(:restaurant).permit(:name, :address, :periodicity, :category, :sub_category, :creator_id)
+    params.require(:event).permit(:name, :date_start, :date_end, :location, :periodicity, :category, :sub_category, :creator_id)
   end
 end
