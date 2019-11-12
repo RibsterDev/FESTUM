@@ -104,7 +104,7 @@ events_attributes = [
 
   {
     name: "Biennale d'art contemporain",
-    date_start: Date.new(2019,09,18),
+    date_start: Date.new(2019,11,18),
     date_end: Date.new(2019,01,05),
     location: 'Lyon',
     periodicity: "biennale",
@@ -126,8 +126,8 @@ events_attributes = [
 
   {
     name: 'Scent of ink',
-    date_start: Date.new(2019,12,08),
-    date_end: Date.new(2019,12,08),
+    date_start: Date.new(2019,11,20),
+    date_end: Date.new(2020,01,20),
     location: 'Paris',
     periodicity: "annuel",
     category: 'danse',
@@ -137,7 +137,7 @@ events_attributes = [
 
   {
     name: "J'ai envie de toi",
-    date_start: Date.new(2019,08,29),
+    date_start: Date.new(2019,11,29),
     date_end: Date.new(2020,04,16),
     location: 'Paris',
     periodicity: "annuel",
@@ -171,7 +171,7 @@ events_attributes = [
 
   {
     name: "The best",
-    date_start: Date.new(2019,09,20),
+    date_start: Date.new(2019,11,20),
     date_end: Date.new(2020,06,01),
     location: 'Paris',
     periodicity: "unique",
