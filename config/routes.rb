@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
-  root to: 'pages#home'
+  root to: 'events#home'
   resources :events, only: [:index, :show, :new, :create] do
     resources :event_users, only: [:create]
     collection do
