@@ -2,11 +2,18 @@ class EventsController < ApplicationController
   before_action :find_event, only: [:show, :edit, :update, :destroy]
 
   def index
-    @events = Event.all
+    cookies[:categories] = params[:categories]
+
+    date = Events.where(date_start: cookies[:date_start])
+    loca = Event.where(location: cookies[:location])
+    catego = Event.where(categories: coockies[:categories])
+    @events = date & loca & catego
   end
 
   def show
+  end
 
+  def home
   end
 
   def new
@@ -34,6 +41,17 @@ class EventsController < ApplicationController
     redirect_to events_path
   end
 
+  def categories
+    cookies[:date_start] = params[:date_start]
+    # cookies[:date_end] = params[:date_end]
+    cookies[:location] = params[:location]
+
+    date_first = Events.where(:date_start <= cookies[:date_start])
+    date_finish = Events.where(:date_end >= cookies[:date_start])
+    loca = Event.where(location: cookies[:location])
+    @events = date & loca
+  end
+
   private
 
   def find_event
@@ -41,6 +59,6 @@ class EventsController < ApplicationController
   end
 
   def event_params
-    params.require(:restaurant).permit(:name, :address, :periodicity, :category, :sub_category, :creator_id)
+    params.require(:event).permit(:name, :date_start, :date_end, :location, :periodicity, :category, :sub_category, :creator_id)
   end
 end
