@@ -3,14 +3,23 @@ class EventsController < ApplicationController
 
   def index
 
+    cookies[:categories] = params[:categories]
+
+    date = Events.where(date_start: cookies[:date_start])
+    loca = Event.where(location: cookies[:location])
+    catego = Event.where(categories: coockies[:categories])
+    @events = date & loca & catego
+
   end
 
   def show
   end
 
+
   def categories
     @events = EventHome.new(params).home
   end
+
 
   def home
   end
