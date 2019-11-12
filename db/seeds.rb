@@ -8,6 +8,7 @@
 
 
 puts "cleaning database"
+<<<<<<< HEAD
 
 Event.destroy_all
 100.times do
@@ -23,3 +24,35 @@ Event.destroy_all
  end
 
  puts "finished"
+=======
+Event.destroy_all
+User.destroy_all
+
+
+
+
+
+
+10.times do
+  user = User.new(
+    email: Faker::Internet.email,
+    password: Faker::Internet.password,
+    name: Faker::Name.name
+    )
+  user.save!
+  event = Event.new(
+    name: Faker::Company.name,
+    date_start: Faker::Date.forward(days:300),
+    location: Faker::Address.city,
+    periodicity: ['mois', 'année', 'jour'].sample,
+    category: ['concert', 'theatre', 'dancing'].sample,
+    sub_category: ['humour', 'drame', 'chanson', 'art de rue', 'animation'].sample,
+    creator: user
+    )
+  event.save!
+end
+
+
+puts "finished"
+
+>>>>>>> 684792b7f9dc0a4b3dfe774becda6d351018e860
