@@ -11,11 +11,4 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
 
-# class EventsController < ApplicationController
-#   def cookies
-#     date = Events.where(date_start: cookies[:date_start])
-#     loca = Event.where(location: cookies[:location])
-
-#   end
-# end
 
