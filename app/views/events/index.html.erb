@@ -6,3 +6,4 @@
   <p><%= event.date_start %></p>
   <% end %>
 </div>
+  <%= link_to "Back to the events", categories_events_path(date_start: cookies[:date_start], location: cookies[:location]) %>
