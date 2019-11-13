@@ -1,0 +1,20 @@
+<div>
+  <h1>Add new Event</h1>
+  <div>
+    <div>
+        <%= simple_form_for @event do |f| %>
+          <%= f.input :name %>
+          <%= f.input :date_start %>
+          <%= f.input :date_end %>
+          <%= f.input :location %>
+          <%= f.input :category %>
+          <%= f.input :sub_category %>
+          <%= f.submit "Submit"%>
+        <% end %>
+        <div>
+
+
+        </div>
+    </div>
+  </div>
+</div>
