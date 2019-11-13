@@ -1,0 +1,10 @@
+.category {
+  background-color: #17a2b8;
+}
+
+.card-container {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: auto auto auto;
+
+}
