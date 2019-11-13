@@ -12,7 +12,7 @@
         <div class="card-container">
           <% @events.each_with_index do |event, index| %>
             <% if array[index] %>
-              <div class="category" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), <%=  %>url(https://images.unsplash.com/photo-1514525253161-7a46d19cd819?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=967&q=80)">
+              <div class="category" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(<%=@img_url[event.category]%>)">
                 <h2><%= link_to array[index] ? "#{array[index]} " : "" , events_path(category: event.category) %></h2>
                 <h3><%= array_compte.count(event.category) %></h3>
               </div>
