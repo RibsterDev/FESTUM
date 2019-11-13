@@ -15,7 +15,7 @@
   </div>
 
   <%= link_to "Add to your list", event_event_users_path(@event), method: :post, data: {confirm: "Are U sure ?"}%>
-  <%= link_to "Back to the events", events_path %>
+  <%= link_to "Back to the events", events_path(category: @event.category) %>
 
 <!--
   <div class="flash flash-success alert alert-dismissible fade show" role="alert">
