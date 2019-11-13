@@ -1,7 +1,30 @@
-<h1>SEARCH AN EVENT</h1>
+<!-- <p id="notice"><%= notice %></p> -->
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80);">
+  <div class="container d-flex flex-column justify-content-center align-items-center">
 
-<%= form_with(url: categories_events_path, local: true, method: :get) do |f| %>
-  <%= f.text_field :location, place_holder: 'Insert your location here' %>
-  <%= f.date_field :date_start, place_holder: 'Your date please' %>
-  <%= f.submit 'Search' %>
-<% end %>
+    <h1>Festum</h1>
+        <div class="bg_search">
+            <div class="search">
+              <%= form_with(url: categories_events_path, local: true, method: :get) do |f| %>
+                <%= f.text_field :location, place_holder: 'Where do you want to go?'%>
+                <%= f.date_field :date_start, place_holder: 'Your date please' %>
+                <%= f.submit 'Search', class: 'search_btn' %>
+              </div>
+          <% end %>
+        </div>
+  </div>
+</div>
+
+
+
+
+
+<div class="footer">
+  <div class="footer-links">
+    <a href="https://github.com/RibsterDev/"><i class="fab fa-github"></i></a>
+    <a href="https://www.linkedin.com/in/jeremy-gibilaro/"><i class="fab fa-linkedin"></i></a>
+  </div>
+  <div class="footer-copyright">
+    Made bye Ribster with <i class="fas fa-heart"></i> at Le Wagon
+  </div>
+</div>
