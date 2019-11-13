@@ -129,7 +129,7 @@ events_attributes = [
     date_end: Date.new(2020,01,20),
     location: 'Paris',
     periodicity: "annuel",
-    category: 'danse',
+    category: 'Danse',
     sub_category: 'contemporain',
     creator: users.sample
   },
@@ -140,7 +140,7 @@ events_attributes = [
     date_end: Date.new(2020,04,16),
     location: 'Paris',
     periodicity: "annuel",
-    category: 'theatre',
+    category: 'Theatre',
     sub_category: 'comedie',
     creator: users.sample
   },
@@ -185,7 +185,7 @@ events_attributes = [
     date_end: Date.new(2020,01,05),
     location: 'Paris',
     periodicity: "unique",
-    category: 'theatre',
+    category: 'Theatre',
     sub_category: 'vivant',
     creator: users.sample
   },
