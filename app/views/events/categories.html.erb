@@ -1,6 +1,5 @@
 <div class="container">
 <%= @events.each do |event| %>
 <h1><%= link_to event.category, events_path(category: event.category) %></h1>
-<p><%= event.name %></p>
 <% end %>
 </div>
