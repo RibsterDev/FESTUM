@@ -14,6 +14,13 @@ class EventsController < ApplicationController
   end
 
   def show
+    # creation d'une instance @is_creator ou on assigne current_user, ce dernier correspond à @event.creator
+    # dans la vue show on affiche le lien delete pour la personne qui a crée l'event
+    if user_signed_in?
+      @is_creator = current_user == @event.creator
+    else
+      @is_creator = false
+    end
   end
 
 
