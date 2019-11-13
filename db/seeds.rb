@@ -221,7 +221,7 @@ events_attributes = [
     category: 'Exposition',
     sub_category: 'art numerique',
     creator: users.sample
-  },
+  }
 ]
 
 Event.create!(events_attributes)
