@@ -1,10 +1,13 @@
 <div class="container">
   <% array = [] %>
+  <% array_compte = [] %>
   <% @events.each do |event| %>
     <% array.include?(event.category) ? array.push(nil) : array.push(event.category)%>
-  <% end %>
+    <% array_compte.push(event.category) %>
+    <% end %>
 
   <% @events.each_with_index do |event, index| %>
-    <h1><%= link_to array[index] ? array[index] : "" , events_path(category: event.category) %> </h1>
+
+    <h1><%= link_to array[index] ? "#{array[index]} #{array_compte.count(event.category)}" : "" , events_path(category: event.category) %></h1>
   <% end %>
 </div>
