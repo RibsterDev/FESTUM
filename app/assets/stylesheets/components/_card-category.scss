@@ -1,5 +1,9 @@
 .category {
-  background-color: #17a2b8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  // background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1514525253161-7a46d19cd819?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=967&q=80);
 }
 
 .card-container {
@@ -7,4 +11,26 @@
   grid-gap: 20px;
   grid-template-columns: auto auto auto;
 
+}
+
+.category h2 a {
+  // display:flex;
+  // justify-content: center;
+  // align-items: center;
+
+  color: white;
+  text-decoration: none;
+  font-size: 32px;
+  font-family: "Open Sans";
+  font-weight: 300;
+}
+
+.category h3 {
+  color: white;
+}
+
+.title {
+  text-align: center;
+  font-weight: 200;
+  font-size: 40px;
 }
