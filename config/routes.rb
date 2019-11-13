@@ -7,6 +7,7 @@ Rails.application.routes.draw do
       get 'categories'
     end
   end
+  resources :events, only: [:destroy]
   # acces a index & destroy en dehors du nestage (sinon les routes ne sont pas bonnes)
   resources :event_users, only: [:index, :destroy]
 
