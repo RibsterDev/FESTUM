@@ -7,27 +7,8 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-puts "cleaning database"
 Event.destroy_all
 User.destroy_all
-
-# user_attributes = [{
-#     name: "lea",
-#     email: "lea@gmail.com",
-#     password: "lealea"
-#   },
-#   {
-#     name: "evan,",
-#     email: "evan@gmail.com",
-#     password: "evanevan"
-#   },
-#   {
-#     name: "jeremy",
-#     email: "jeremy@gmail.com",
-#     password: "jeremy"
-#   }
-# ]
-# User.create!(user_attributes)
 
 
 user1 = User.new(
@@ -64,68 +45,186 @@ users = [user1, user2, user3]
 #   event.save!
 # end
 
-  event = Event.new(
-    name: "teuf1",
-    date_start: Date.new(2019, 11, 01),
-    date_end: Date.new(2019, 11, 30),
-    location: "Lyon",
-    periodicity: ['mois', 'année', 'jour'].sample,
-    category: "concert",
-    sub_category: 'humour',
+events_attributes = [
+  {
+    name: 'Roméo et Juliette',
+    date_start: Date.new(2019,12,23),
+    date_end: Date.new(2020,01,04),
+    location: 'Lyon',
+    periodicity: "annuel",
+    category: 'Theatre',
+    sub_category: 'tragédie',
     creator: users.sample
-    )
-  event.save!
+  },
 
-  event = Event.new(
-    name: "teuf2",
-    date_start: Date.new(2019, 11, 14),
-    date_end: Date.new(2019, 11, 30),
-    location: "Lyon",
-    periodicity: ['mois', 'année', 'jour'].sample,
-    category: "dancing",
-    sub_category: 'drame',
+  {
+    name: 'La Vie de Galilée',
+    date_start: Date.new(2019,12,23),
+    date_end: Date.new(2019,12,23),
+    location: 'Lyon',
+    periodicity: "unique",
+    category: 'Theatre',
+    sub_category: 'aventure',
     creator: users.sample
-    )
-  event.save!
+  },
 
-    event = Event.new(
-    name: "teuf3",
-    date_start: Date.new(2019, 11, 01),
-    date_end: Date.new(2019, 11, 10),
-    location: "Lyon",
-    periodicity: ['mois', 'année', 'jour'].sample,
+  {
+    name: "Never Complain, never explain",
+    date_start: Date.new(2019,11,15),
+    date_end: Date.new(2019,11,17),
+    location: 'Lyon',
+    periodicity: "annuel",
+    category: 'Festival',
+    sub_category: 'art',
+    creator: users.sample
+  },
+
+  {
+    name: "Artjacking",
+    date_start: Date.new(2019,11,15),
+    date_end: Date.new(2019,11,15),
+    location: 'Lyon',
+    periodicity: "mensuel",
+    category: 'Musique',
+    sub_category: 'rap',
+    creator: users.sample
+  },
+
+  {
+    name: "Foodoo",
+    date_start: Date.new(2019,12,10),
+    date_end: Date.new(2019,12,12),
+    location: 'Lyon',
+    periodicity: "annuel",
+    category: 'Festival',
+    sub_category: 'cuisine',
+    creator: users.sample
+  },
+
+  {
+    name: "Biennale d'art contemporain",
+    date_start: Date.new(2019,11,18),
+    date_end: Date.new(2019,01,05),
+    location: 'Lyon',
+    periodicity: "biennale",
+    category: 'Exposition',
+    sub_category: 'art contemporain',
+    creator: users.sample
+  },
+
+  {
+    name: "FUNFUNFUNK",
+    date_start: Date.new(2019,12,27),
+    date_end: Date.new(2019,12,27),
+    location: 'Lyon',
+    periodicity: "unique",
+    category: 'Musique',
+    sub_category: 'funk',
+    creator: users.sample
+  },
+
+  {
+    name: 'Scent of ink',
+    date_start: Date.new(2019,11,20),
+    date_end: Date.new(2020,01,20),
+    location: 'Paris',
+    periodicity: "annuel",
+    category: 'danse',
+    sub_category: 'contemporain',
+    creator: users.sample
+  },
+
+  {
+    name: "J'ai envie de toi",
+    date_start: Date.new(2019,11,29),
+    date_end: Date.new(2020,04,16),
+    location: 'Paris',
+    periodicity: "annuel",
     category: 'theatre',
-    sub_category: 'art de rue',
+    sub_category: 'comedie',
     creator: users.sample
-    )
-  event.save!
+  },
 
-      event = Event.new(
-    name: "teuf4",
-    date_start: Date.new(2019, 11, 01),
-    date_end: Date.new(2019, 11, 15),
-    location: "Lyon",
-    periodicity: ['mois', 'année', 'jour'].sample,
-    category: 'concert',
-    sub_category: 'art de rue',
+  {
+    name: "Touré Kunda",
+    date_start: Date.new(2019,11,15),
+    date_end: Date.new(2019,11,15),
+    location: 'Paris',
+    periodicity: "unique",
+    category: 'Musique',
+    sub_category: 'sénégal',
     creator: users.sample
-    )
-  event.save!
+  },
 
-      event = Event.new(
-    name: "teuf5",
-    date_start: Date.new(2019, 11, 12),
-    date_end: Date.new(2019, 11, 17),
-    location: "Lyon",
-    periodicity: ['mois', 'année', 'jour'].sample,
+  {
+    name: "Johnny, fabuleux le comeback",
+    date_start: Date.new(2019,11,15),
+    date_end: Date.new(2019,11,15),
+    location: 'Paris',
+    periodicity: "exceptionnel",
+    category: 'Concert',
+    sub_category: 'beauf',
+    creator: users.sample
+  },
+
+
+  {
+    name: "The best",
+    date_start: Date.new(2019,11,20),
+    date_end: Date.new(2020,06,01),
+    location: 'Paris',
+    periodicity: "unique",
+    category: 'Spectacle',
+    sub_category: 'comique',
+    creator: users.sample
+  },
+
+  {
+    name: "Sleep no more",
+    date_start: Date.new(2019,12,20),
+    date_end: Date.new(2020,01,05),
+    location: 'Paris',
+    periodicity: "unique",
     category: 'theatre',
-    sub_category: 'art de rue',
+    sub_category: 'vivant',
     creator: users.sample
-    )
-  event.save!
+  },
 
+  {
+    name: "Chrisian Boltanski",
+    date_start: Date.new(2019,11,13),
+    date_end: Date.new(2020,03,16),
+    location: 'Paris',
+    periodicity: "unique",
+    category: 'Exposition',
+    sub_category: 'art contemporain',
+    creator: users.sample
+  },
 
+  {
+    name: "Futur, ancien, fugitif",
+    date_start: Date.new(2019,10,16),
+    date_end: Date.new(2020,01,05),
+    location: 'Paris',
+    periodicity: "unique",
+    category: 'Exposition',
+    sub_category: 'art numerique',
+    creator: users.sample
+  },
 
+  {
+    name: "Philippe katerine, the show",
+    date_start: Date.new(2019,11,16),
+    date_end: Date.new(2020,01,16),
+    location: 'Lyon',
+    periodicity: "unique",
+    category: 'Exposition',
+    sub_category: 'art numerique',
+    creator: users.sample
+  },
+]
+
+Event.create!(events_attributes)
 
 puts "finished"
 
