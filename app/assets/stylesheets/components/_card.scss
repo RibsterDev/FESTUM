@@ -4,18 +4,19 @@
 
 .card-event {
   overflow: hidden;
-  height: 120px;
+  height: 150px;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
   align-items: center;
   border-radius: 2px;
   margin-top:30px;
+  font-family: 'Comfortaa', cursive;
 }
 
 .card-event img {
   height: 100%;
-  width: 120px;
+  width: 150px;
   object-fit: cover;
 }
 
@@ -36,7 +37,8 @@
 }
 
 .card-event-info1 h2 {
-  font-size: 20px;
+  color: #696969;
+  font-size: 32px;
   font-weight: bold;
   margin: 0;
 }
@@ -73,5 +75,5 @@
 
 .card-event-info1 a {
   text-decoration: none;
-  color: black;
+  color: #696969;
 }
