@@ -45,7 +45,6 @@ users = [user1, user2, user3]
 #   event.save!
 # end
 
-
 events_attributes = [
   {
     name: 'Roméo et Juliette',
