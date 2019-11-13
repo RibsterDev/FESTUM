@@ -1,6 +1,10 @@
 <div class="container">
-<% @events.each do |event| %>
-<h1><% link_to event.category, events_path(category: event.category) %></h1>
-<p><%= event.name %></p>
-<% end %>
+  <% array = [] %>
+  <% @events.each do |event| %>
+    <% array.include?(event.category) ? array.push(nil) : array.push(event.category)%>
+  <% end %>
+
+  <% @events.each_with_index do |event, index| %>
+    <h1><%= link_to array[index] ? array[index] : "" , events_path(category: event.category) %> </h1>
+  <% end %>
 </div>
