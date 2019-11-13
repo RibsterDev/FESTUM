@@ -7,6 +7,8 @@ Rails.application.routes.draw do
       get 'categories'
     end
   end
+  # acces a index & destroy en dehors du nestage (sinon les routes ne sont pas bonnes)
+  resources :event_users, only: [:index, :destroy]
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
