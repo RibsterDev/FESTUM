@@ -56,7 +56,6 @@
   line-height: 1.4;
   opacity: .7;
   margin-bottom: 0;
-  margin-top: 40px;
   text-align: right;
 
 }
@@ -78,4 +77,11 @@
 .card-event-info1 a {
   text-decoration: none;
   color: #696969;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+}
+
+.card-event-info1 a:hover {
+  color: #2B2D2F;
+  opacity: 1;
 }
