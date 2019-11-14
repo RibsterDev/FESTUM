@@ -19,6 +19,11 @@ class EventHome
     @events
   end
 
+  # def geocode_by
+  #   @params[:address].present?
+  #   @events
+  # end
+
   private
 
   def filter_by_location

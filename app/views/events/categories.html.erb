@@ -14,7 +14,9 @@
         <% @events.each do |event| %>
         <% a.push(event.category) %>
         <% end %>
+        <hr>
         <h4><b><%= a.count %></b> évènements à <%= cookies[:location] %> le <%= cookies[:date_start] %></h4>
+        <hr>
       </div>
         <div class="card-container">
           <% @events.each_with_index do |event, index| %>
@@ -28,6 +30,12 @@
               <% end  %>
             <% end %>
         </div>
+
+      <div
+        id="map"
+        data-markers="<%= @markers.to_json %>"
+        data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
+      ></div>
 
 </div>
 
