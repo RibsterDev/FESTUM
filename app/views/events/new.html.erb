@@ -1,22 +1,55 @@
-<div>
-  <h1>Add new Event</h1>
-  <div>
+
+
+<div class="megabox">
+<div class="box-add">
+
+  <div >
+      <p><span id="type-script"></span></p>
+  </div>
+
+
+
+  <div class="formulaire">
+    <h1>Add Your Event</h1>
     <div>
-        <%= simple_form_for @event do |f| %>
-          <%= f.input :name %>
-          <%= f.input :date_start %>
-          <%= f.input :date_end %>
-          <%= f.input :location %>
-          <%= f.input :category %>
-          <%= f.input :sub_category %>
-          <%= f.input :photo %>
-          <%= f.input :photo_cache, as: :hidden %>
-          <%= f.submit "Submit"%>
-        <% end %>
-        <div>
+      <div>
+          <%= simple_form_for @event do |f| %>
+          <div class="text-add">
+            <%= f.text_field :name, placeholder: "Name of the event "%>
+          </div>
 
+          <div class="text-add">
+            <%= f.input :date_start %>
+          </div>
 
-        </div>
+          <div class="text-add">
+            <%= f.input :date_end %>
+          </div>
+
+          <div class="text-add">
+            <%= f.text_field :location, placeholder: "Location of the event" %>
+          </div>
+
+          <div class="text-add">
+            <%= f.text_field :category, placeholder: "Category of the event" %>
+          </div>
+
+          <div class="text-add">
+            <%= f.text_field :sub_category, placeholder: "Subcategory ex: Humour, rap..." %>
+          </div>
+
+          <div class="text-add">
+            <%= f.input :photo %>
+          </div>
+            <%= f.input :photo_cache, as: :hidden %>
+          <div class="button">
+            <%= f.submit "Submit"%>
+          </div>
+          <% end %>
+      </div>
     </div>
   </div>
+
+
+</div>
 </div>
