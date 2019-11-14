@@ -1,6 +1,7 @@
 <div class="container">
   <% array = [] %>
   <% array_compte = [] %>
+  <% a = [] %>
   <% @events.each do |event| %>
     <% array.include?(event.category) ? array.push(nil) : array.push(event.category)%>
     <% array_compte.push(event.category) %>
@@ -9,12 +10,19 @@
       <div class="title">
          CATEGORIES
       </div>
+      <div class="sub-title">
+        <% @events.each do |event| %>
+        <% a.push(event.category) %>
+        <% end %>
+        <h4><b><%= a.count %></b> évènements à <%= cookies[:location] %> le <%= cookies[:date_start] %></h4>
+      </div>
         <div class="card-container">
           <% @events.each_with_index do |event, index| %>
             <% if array[index] %>
               <div class="category" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(<%=@img_url[event.category]%>)">
                 <h2><%= link_to array[index] ? "#{array[index]} " : "" , events_path(category: event.category) %></h2>
-                <h3><%= array_compte.count(event.category) %></h3>
+                <!-- <div class="separator"></div> -->
+                <h3><b><%= array_compte.count(event.category) %></b> évènements</h3>
               </div>
               <% else  %>
               <% end  %>
