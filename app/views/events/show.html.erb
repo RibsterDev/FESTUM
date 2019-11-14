@@ -3,36 +3,39 @@
 </div>
 <div class="show">
   <div class="container">
-    <div class="infos">
-      <h2><%=@event.name%></h2>
-      <div class="date">
-        <p><%= @event.date_start %></p>
-        <p><%= @event.date_start %></p>
+    <div class="col-md-8 col-lg-8">
+      <div class="text">
+        <h2><%=@event.name%></h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus neque expedita possimus, architecto, consequuntur vitae quibusdam fuga ipsa! Deserunt culpa reiciendis fugit libero vel tenetur, ex sed amet modi dolor!
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt quod ab enim eum dolorum, facilis aliquid optio eos reprehenderit mollitia eius illo dignissimos cum totam culpa libero, asperiores tempora eligendi?
+          Deserunt quod ab enim eum dolorum, facilis aliquid optio eos reprehenderit mollitia eius illo dignissimos cum totam culpa libero, asperiores tempora eligendi?
+        </p>
       </div>
-      <p><%=@event.location %></p>
-      <h3><%= @event.category %></h3>
-      <p><%= @event.sub_category %></p>
     </div>
-    <div class="btn-flex">
-      <div class="btn-flat">
-        <%= link_to "Add to your list", event_event_users_path(@event), method: :post, data: {confirm: "Are U sure ?"}%>
+    <div class="col-md-3 col-lg-3">
+      <div class="infos">
+        <h3><%= @event.category %></h3>
+        <h4><%= @event.sub_category %></h4>
+
+        <p><%= @event.date_start %></p>
+        <p><%= @event.date_start %></p>
+        <p><%=@event.location %></p>
       </div>
-      <div class="btn-flat">
-        <%= link_to "Back to the events", events_path(category: @event.category) %>
-        <% if @is_creator  %>
-          <%= link_to "Delete event", event_path(@event), method: :delete, data: {confirm: "Are you sure ?"} %>
-        <% end  %>
+      <div class="btn">
+        <div class="btn-flat">
+          <%= link_to "Add to your list", event_event_users_path(@event), method: :post, data: {confirm: "Are U sure ?"}%>
+        </div>
+        <div class="btn-flat">
+          <%= link_to "Back to the events", events_path(category: @event.category) %>
+          <% if @is_creator  %>
+            <%= link_to "Delete event", event_path(@event), method: :delete, data: {confirm: "Are you sure ?"} %>
+          <% end  %>
+        </div>
       </div>
     </div>
   </div>
 </div>
 
-
-<!--   <%= link_to "Add to your list", event_event_users_path(@event), method: :post, data: {confirm: "Are U sure ?"}%>
-  <%= link_to "Back to the events", events_path(category: @event.category) %>
-  <% if @is_creator  %>
-    <%= link_to "Delete event", event_path(@event), method: :delete, data: {confirm: "Are you sure ?"} %>
-  <% end  %> -->
 
 
 
