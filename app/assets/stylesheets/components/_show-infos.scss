@@ -9,6 +9,11 @@
   padding-top: 30px;
 }
 
+.text h4 {
+  opacity: 0.6;
+  text-decoration: underline;
+}
+
 .infos {
   margin-top: 90px;
   padding: 0px 20px 20px 20px;
@@ -31,9 +36,11 @@
   font-weight: bold;
 }
 
-// .container {
-//   display: flex;
-// }
+
+#event {
+  display: flex;
+}
+
 
 .infos-pratiques p{
  font-size: 14px;
