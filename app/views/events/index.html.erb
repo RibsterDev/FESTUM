@@ -1,7 +1,11 @@
 <div class="container">
   <% @events.each do |event| %>
     <div class="card-event">
-    <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80" />
+    <% if event.photo.present? %>
+      <%= cl_image_tag event.photo %>
+    <% else %>
+      <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80" />
+    <% end %>
       <div class="card-event-infos">
          <div class="card-event-info1">
             <h2><%= link_to event.name, event_path(event)%></h2>
