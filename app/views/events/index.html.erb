@@ -1,21 +1,19 @@
 <div class="container">
-  <div class="card-event">
-  <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80" />
-    <div class="card-event-infos">
-       <div class="card-event-info1">
-        <% @events.each do |event| %>
-          <h2><%= link_to event.name, event_path(event)%></h2>
-          <p><%= event.date_start %> | <%= event.date_end %> </p>
-        <% end %>
-      </div>
-      <div class="card-event-info2">
-        <% @events.each do |event| %>
-          <h4><%= event.category %></h4>
-          <p><%= event.sub_category %></p>
-        <% end %>
+  <% @events.each do |event| %>
+    <div class="card-event">
+    <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80" />
+      <div class="card-event-infos">
+         <div class="card-event-info1">
+            <h2><%= link_to event.name, event_path(event)%></h2>
+            <p><%= event.date_start %> | <%= event.date_end %> </p>
+          </div>
+        <div class="card-event-info2">
+            <h4><%= event.category %></h4>
+            <p><%= event.sub_category %></p>
+        </div>
       </div>
     </div>
-  </div>
+  <% end %>
 </div>
 
 <%= link_to "Back to the events", categories_events_path(date_start: cookies[:date_start], location: cookies[:location]) %>
