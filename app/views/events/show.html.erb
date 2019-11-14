@@ -6,20 +6,42 @@
     <div class="col-md-8 col-lg-8">
       <div class="text">
         <h2><%=@event.name%></h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus neque expedita possimus, architecto, consequuntur vitae quibusdam fuga ipsa! Deserunt culpa reiciendis fugit libero vel tenetur, ex sed amet modi dolor!
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt quod ab enim eum dolorum, facilis aliquid optio eos reprehenderit mollitia eius illo dignissimos cum totam culpa libero, asperiores tempora eligendi?
-          Deserunt quod ab enim eum dolorum, facilis aliquid optio eos reprehenderit mollitia eius illo dignissimos cum totam culpa libero, asperiores tempora eligendi?
+        <p>L’exposition Futur, ancien, fugitif, consacrée à « une scène française » s’appuie sur une conception ouverte de l’inscription territoriale
+          – qui rassemble des artistes né.e.s en France ou à l’étranger, vivant en France ou à l’étranger, lié.e.s provisoirement ou durablement à ce pays
+          – autant qu’elle échappe aux effets de tabula rasa qui voudraient qu’une génération en éclipse une autre.
+          Elle réunit au contraire des « contemporain.e.s » qui partagent aujourd’hui cet espace en évolution et aux frontières
+          poreuses. Et cherche à dessiner les courroies de transmission par lesquelles transite cet air du temps que respirent simultanément les quarante-quatre artistes
+          ou collectifs d’artistes réuni·e·s pour l’occasion. Des artistes né·e·s entre les années 1930 et les années 1990, mais qui vivent et travaillent tou·te·s,
+          dans et avec leur époque. Contemporain est un « mot transitif et par conséquent relationnel »,
+          rappelait Lionel Ruffel dans Brouhaha. Les mondes du contemporain.
+          On est contemporain de quelque chose ou de quelqu’un et c’est cette interdépendance,
+          ce liant qui nous sert à établir des ponts d’un·e artiste à l’autre dans l’exposition que nous avons bâtie dans l’ensemble des espaces du Palais de Tokyo.
+          C’est encore cette perméabilité au présent et une forme de permanence au temps que nous avons cru déceler chez les artistes
+          réuni·e·s dans l’exposition et qui nous a permis d’établir cette photographie non pas exhaustive, ni même représentative,
+          mais simplement sensible d’une scène française. Ou plutôt d’une « autre » scène française. De celle qui se trame plus discrètement
+          mais avec non moins de puissance dans les ateliers, les écoles d’art, les espaces partagés, dans les marges ou à l’abri du marché.
         </p>
       </div>
     </div>
     <div class="col-md-3 col-lg-3">
       <div class="infos">
-        <h3><%= @event.category %></h3>
+        <h2><%= @event.category %></h2>
         <h4><%= @event.sub_category %></h4>
-
-        <p><%= @event.date_start %></p>
-        <p><%= @event.date_start %></p>
+        <div class="date">
+          <% if @event.date_start != @event.date_end %>
+            <p><%= @event.date_start %></p>
+            <p><%= @event.date_end %></p>
+          <% else %>
+            <p><%= @event.date_start %></p>
+          <% end %>
+        </div>
         <p><%=@event.location %></p>
+        <div class="infos-pratiques">
+          <h5>Infos pratiques</h5>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          Repudiandae optio, ratione voluptatum odit molestias eos illo nisi quis sed?
+          </p>
+        </div>
       </div>
       <div class="btn">
         <div class="btn-flat">
