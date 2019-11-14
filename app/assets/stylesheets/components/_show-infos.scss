@@ -1,0 +1,47 @@
+.text {
+  margin-top: 90px;
+}
+
+.text h2 {
+  font-size: 40px;
+  font-weight: bold;
+  padding-bottom: 30px;
+  padding-top: 30px;
+}
+
+.infos {
+  margin-top: 90px;
+  padding: 0px 20px 20px 20px;
+}
+
+.infos-global {
+  position: sticky;
+  top: 20px;
+}
+
+.date p {
+  font-size: 24px;
+  margin-right: 15px;
+  color: #024959;
+  margin-bottom: 0;
+}
+
+
+.infos h2 {
+  font-weight: bold;
+}
+
+.container {
+  display: flex;
+}
+
+.infos-pratiques p{
+ font-size: 14px;
+ color: black;
+}
+
+.infos-pratiques h5{
+  font-size: 20px;
+  color: black;
+  font-weight: bold;
+}
