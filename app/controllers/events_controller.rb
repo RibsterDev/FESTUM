@@ -35,8 +35,8 @@ class EventsController < ApplicationController
   def categories
     @img_url = IMAGE_URL
     cookies[:date_start] = params[:date_start]
-    cookies[:location] = params[:location]
-    @events = EventHome.new(params).home
+    cookies[:location] = params[:location].capitalize if params.key? :location
+    @events = EventHome.new(cookies).home
   end
 
 
