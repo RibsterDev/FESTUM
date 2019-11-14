@@ -1,4 +1,10 @@
-<div class="banner-show" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1566131929856-21b5077cd4fb?ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80);">
+<% if @event.photo.present? %>
+  <% @url = cl_image_path @event.photo %>
+ <% else %>
+  <% @url ="https://images.unsplash.com/photo-1571575522341-be760794a35b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80" alt="event">
+<%end %>
+
+<div class="banner-show" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(@url);">
   <h1><%=@event.name%></h1>
 </div>
 <div class="show">
@@ -36,7 +42,6 @@
           mais simplement sensible d’une scène française. Ou plutôt d’une « autre » scène française. De celle qui se trame plus discrètement
           mais avec non moins de puissance dans les ateliers, les écoles d’art, les espaces partagés, dans les marges ou à l’abri du marché.
         </p>
-      </div>
     </div>
     <div class="col-md-3 col-lg-3">
       <div class="infos-global">
