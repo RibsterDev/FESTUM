@@ -1,6 +1,4 @@
 class EventUsersController < ApplicationController
-
-
   def index
     @event_users = EventUser.all
   end
@@ -21,5 +19,6 @@ class EventUsersController < ApplicationController
     @event_user.destroy
     # redirect vers la vue de mes events à moi index de event_users
     redirect_to event_users_path
+
   end
 end

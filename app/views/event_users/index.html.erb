@@ -1,15 +1,23 @@
-<h1>My Event List</h1>
 <div class="container">
+  <h1>My event list</h1>
   <% @event_users.each do |event_user| %>
-  <h1><%= event_user.event.name %></h1>
-  <% if event_user.event.photo.present? %>
-    <p><%= cl_image_tag event_user.event.photo %></p>
-  <%else %>
-    <img src="https://images.unsplash.com/photo-1571575522341-be760794a35b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80" alt="event">
-  <%end %>
-  <p><%= event_user.event.location %></p>
-  <p><%= event_user.event.date_start %></p>
-  <%= link_to "Delete", event_user_path(event_user), method: :delete  %>
+    <div class="card-event">
+    <% if event_user.event.photo.present? %>
+      <%= cl_image_tag event.photo %>
+    <% else %>
+      <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80" />
+    <% end %>
+      <div class="card-event-infos">
+         <div class="card-event-info1">
+            <h2><%= link_to event_user.event.name, event_path(event_user)%></h2>
+            <p><%= event_user.event.date_start %> | <%= event_user.event.date_end %> </p>
+          </div>
+        <div class="card-event-info2">
+            <h4><%= event_user.event.category %></h4>
+            <p><%= event_user.event.sub_category %></p>
+        </div>
+      </div>
+    </div>
   <% end %>
 </div>
 <!-- on regarde si on a des parametre dans les cookies, ici on regarde si on a fait une recherche dans catgory-->
@@ -18,6 +26,8 @@
 <%= link_to "Back to Home", root_path %>
 <% else %>
 <!-- Si il y a eut des coockies alors c'est qu'on a fait une recherche au prealable donc on propose aussi de retourner sur la recherche-->
-<%= link_to "Back to the list", events_path(cookies[:location], cookies[:date_start], cookies[:category])  %>
+  <%= link_to "Back to the list", events_path(cookies[:location], cookies[:date_start], cookies[:category])  %>
  <%= link_to "Back to Home", root_path  %>
- <% end %>
+<% end %>
+
+
