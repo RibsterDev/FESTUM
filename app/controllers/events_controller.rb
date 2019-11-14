@@ -1,6 +1,7 @@
 class EventsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:home, :index, :categories, :show]
   before_action :find_event, only: [:show, :edit, :update, :destroy]
+
   IMAGE_URL = {
     'Concert' => 'https://images.unsplash.com/photo-1464375117522-1311d6a5b81f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80',
     'Festival' => 'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=967&q=80',
@@ -37,6 +38,16 @@ class EventsController < ApplicationController
     cookies[:date_start] = params[:date_start]
     cookies[:location] = params[:location].capitalize if params.key? :location
     @events = EventHome.new(cookies).home
+
+    @events = @events.geocoded #returns events with coordinates
+
+    @markers = @events.map do |event|
+      {
+        lat: event.latitude,
+        lng: event.longitude,
+        # infoWindow: render_to_string(partial: "info_window", locals: { flat: flat })
+      }
+    end
   end
 
 

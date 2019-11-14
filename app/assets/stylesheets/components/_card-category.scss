@@ -40,6 +40,7 @@
 }
 
 .title {
+  margin-top: 20px;
   text-align: center;
   font-weight: 200;
   font-size: 40px;
@@ -49,4 +50,24 @@
   height: 1px;
   width: 150px;
   background-color: white;
+}
+
+.sub-title {
+  display: flex;
+  margin: 20px 0;
+}
+
+.sub-title {
+  hr {
+    color: red;
+    width: 100%;
+    height: 2px;
+  }
+}
+
+.sub-title h4 {
+  font-family: "open Sans";
+  font-size: 18px;
+  padding: 0px 50px;
+  width: 100%;
 }
