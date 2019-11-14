@@ -6,7 +6,7 @@
         <div class="bg_search">
             <div class="search">
               <%= form_with(url: categories_events_path, local: true, method: :get) do |f| %>
-                <%= f.text_field :location, place_holder: 'Where do you want to go?'%>
+                <%= f.text_field :location.capitalize, place_holder: 'Where do you want to go?'%>
                 <%= f.date_field :date_start, place_holder: 'Your date please' %>
                 <%= f.submit 'Search', class: 'search_btn' %>
               </div>
