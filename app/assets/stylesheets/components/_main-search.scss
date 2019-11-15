@@ -1,16 +1,16 @@
 .bg_search {
   display: flex;
   justify-content: center;
-  // background-color: rgba(0, 0, 0, 0.5);
-  background-image: linear-gradient(90deg, rgba(238, 101, 136, 0.9), rgba(246, 149, 96, 0.9));
+  background-color: rgba(0, 0, 0, 0.5);
+  // background-image: linear-gradient(90deg, rgba(238, 101, 136, 0.9), rgba(246, 149, 96, 0.9));
 
-  height: 100px;
+  height: 150px;
   width:600px;
 }
 
 .search {
-  align-items: center;
   display: flex;
+  align-items: center;
 }
 
 .search #location  {
@@ -43,4 +43,28 @@
     text-decoration: none;
     padding: 11px 20px;
     color: white;
+}
+
+.label {
+    color: white;
+    display: inline-block;
+    margin-bottom: 0.5rem;
+    font-family: "Open Sans";
+    font-weight: lighter;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  padding: 0 10px;
+}
+
+.titi {
+  display: flex;
+}
+
+.main-search {
+  position: relative;
+    padding: 0 10px;
+    bottom: -33px;
 }
