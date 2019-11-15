@@ -70,7 +70,7 @@ events_attributes = [
 
   {
     name: 'La Vie de Galilée',
-    date_start: Date.new(2019,12,23),
+    date_start: Date.new(2019,11,15),
     date_end: Date.new(2019,12,23),
     location: 'Lyon',
     address: '57 rue Banaudon, Lyon',
@@ -128,7 +128,7 @@ Jonglage 2.0, cirque en réalité virtuelle, performance à la croisée du Net A
 
   {
     name: "Foodoo",
-    date_start: Date.new(2019,12,10),
+    date_start: Date.new(2019,11,15),
     date_end: Date.new(2019,12,12),
     location: 'Lyon',
     address: '91  rue de la République, Lyon',
@@ -141,7 +141,7 @@ Jonglage 2.0, cirque en réalité virtuelle, performance à la croisée du Net A
 
   {
     name: "Biennale d'art contemporain",
-    date_start: Date.new(2019,11,18),
+    date_start: Date.new(2019,11,15),
     date_end: Date.new(2019,01,05),
     location: 'Lyon',
     address: '96 Rue de Marseille, Lyon',
@@ -160,7 +160,7 @@ Cette édition s’inscrit dans une volonté de soutenir la création d’œuvre
 
   {
     name: "FUNFUNFUNK",
-    date_start: Date.new(2019,12,27),
+    date_start: Date.new(2019,11,15),
     date_end: Date.new(2019,12,27),
     location: 'Lyon',
     address: '32 Rue Domer, Lyon',
@@ -173,7 +173,7 @@ Cette édition s’inscrit dans une volonté de soutenir la création d’œuvre
 
   {
     name: 'Scent of ink',
-    date_start: Date.new(2019,11,20),
+    date_start: Date.new(2019,11,15),
     date_end: Date.new(2020,01,20),
     location: 'Paris',
     address: '1 Rue Velpeau, Paris',
@@ -197,7 +197,7 @@ Depuis sa fondation en 1962, la Compagnie Nationale de Danse de Corée, résiden
 
   {
     name: "J'ai envie de toi",
-    date_start: Date.new(2019,11,29),
+    date_start: Date.new(2019,11,15),
     date_end: Date.new(2020,04,16),
     location: 'Paris',
     address: '10 Rue de Mézières, Paris',
@@ -210,8 +210,8 @@ Depuis sa fondation en 1962, la Compagnie Nationale de Danse de Corée, résiden
 
   {
     name: "Touré Kunda",
-    date_start: Date.new(2019,11,15),
-    date_end: Date.new(2019,11,15),
+    date_start: Date.new(2019,11,23),
+    date_end: Date.new(2019,11,24),
     location: 'Paris',
     address: '2 Rue du Croissant, Paris',
     periodicity: "unique",
@@ -227,8 +227,8 @@ Depuis sa fondation en 1962, la Compagnie Nationale de Danse de Corée, résiden
 
   {
     name: "Johnny, le fabuleux comeback",
-    date_start: Date.new(2019,11,15),
-    date_end: Date.new(2019,11,15),
+    date_start: Date.new(2019,11,23),
+    date_end: Date.new(2019,11,23),
     location: 'Paris',
     address: '33 Rue Saint-Sulpice, Paris',
     periodicity: "exceptionnel",
@@ -258,7 +258,7 @@ Depuis sa fondation en 1962, la Compagnie Nationale de Danse de Corée, résiden
 
   {
     name: "Sleep no more",
-    date_start: Date.new(2019,12,20),
+    date_start: Date.new(2019,11,20),
     date_end: Date.new(2020,01,05),
     location: 'Paris',
     address: '30 Rue du Dragon, Paris',
