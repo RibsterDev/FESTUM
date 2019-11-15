@@ -55,9 +55,7 @@
 .sub-title {
   display: flex;
   margin: 20px 0;
-}
 
-.sub-title {
   hr {
     color: red;
     width: 100%;
@@ -68,6 +66,7 @@
 .sub-title h4 {
   font-family: "open Sans";
   font-size: 18px;
-  padding: 0px 50px;
+  // padding: 0px 50px;
   width: 100%;
+  margin-bottom: 0;
 }
