@@ -1,8 +1,11 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: 'events#home'
+
+  # on simule le create de event_user en get pour hacker le redirect du sign in
+  get '/events/:event_id/add_event', to: 'event_users#create', as: 'add_event'
+
   resources :events, only: [:index, :show, :new, :create] do
-    resources :event_users, only: [:create]
     collection do
       get 'categories'
     end

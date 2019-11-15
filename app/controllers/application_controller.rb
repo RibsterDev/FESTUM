@@ -4,11 +4,11 @@ class ApplicationController < ActionController::Base
 
   private
 
-  def after_sign_in_path_for(resource_or_scope)
-    if cookies[:category] == ""
-      root_path
-    else
-      events_path(cookies[:location], cookies[:date_start], cookies[:category])
-    end
-  end
+  # def after_sign_in_path_for(resource_or_scope)
+  #   if cookies[:category] == ""
+  #     root_path
+  #   else
+  #     events_path(cookies[:location], cookies[:date_start], cookies[:category])
+  #   end
+  # end
 end
