@@ -1,8 +1,6 @@
 source 'https://rubygems.org'
 ruby '2.6.3'
 
-require 'nokogiri'
-require 'open-uri'
 gem 'faker'
 gem 'bootsnap', require: false
 gem 'devise'
