@@ -18,6 +18,8 @@
       </div>
     </div>
   <% end %>
+  <div class="btn-flat" id="index-btn">
+    <%= link_to "Back to the events", categories_events_path(date_start: cookies[:date_start], location: cookies[:location]) %>
+  </div>
 </div>
 
-<%= link_to "Back to the events", categories_events_path(date_start: cookies[:date_start], location: cookies[:location]) %>

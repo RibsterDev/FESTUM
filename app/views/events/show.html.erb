@@ -71,8 +71,10 @@
           <div class="btn-flat" id="show-2">
             <%= link_to "Back to the events", events_path(category: @event.category) %>
             <% if @is_creator  %>
-              <%= link_to "Delete event", event_path(@event), method: :delete, data: {confirm: "Are you sure ?"} %>
-            <% end  %>
+              <div class="btn-flat" id="show-3">
+                <%= link_to "Delete event", event_path(@event), method: :delete, data: {confirm: "Are you sure ?"} %>
+              </div>
+            <% end %>
           </div>
         </div>
       </div>
