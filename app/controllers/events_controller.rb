@@ -68,7 +68,7 @@ class EventsController < ApplicationController
     @event = Event.new(event_params)
     @event.creator = current_user
     if @event.save
-      redirect_to categories_events_path
+      redirect_to event_path(@event)
     else
       render :new
     end
