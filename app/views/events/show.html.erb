@@ -38,7 +38,7 @@
         </div>
         <div class="btn">
           <div class="btn-flat" id="show-1">
-            <%= link_to "Add to your list", add_event_path(@event), data: {confirm: "Are U sure ?"}%>
+            <%= link_to "Add to your list", add_event_path(@event), data: {confirm: "You must be log to add an event."}%>
           </div>
           <div class="btn-flat" id="show-2">
             <%= link_to "Back to the events", events_path(category: @event.category) %>
